@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>なごみハウジング｜住まいの修理・リフォーム相談窓口</title>
-  <meta name="description" content="福岡市博多区を中心に、住まいの修理・リフォームをお手頃価格でご提供。現地調査・お見積り無料。代表 平塚かずひろが直接対応します。">
+  <title>なごみハウジング｜住まいの補修・リフォーム相談窓口</title>
+  <meta name="description" content="なごみハウジングは、住まいの補修・リフォームのご相談を承っています。福岡市博多区を拠点に、現地確認・お見積もりまで対応いたします。">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -12,8 +12,8 @@
       font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
       background: #faf8f5;
       color: #333;
-      line-height: 1.8;
-      font-size: 16px;
+      line-height: 1.9;
+      font-size: 17px;
     }
 
     /* ヘッダー */
@@ -29,13 +29,13 @@
       z-index: 100;
     }
     .logo {
-      font-size: 1.1em;
+      font-size: 1.15em;
       font-weight: bold;
       color: #4a8c6a;
       letter-spacing: 0.05em;
     }
-    .header-tel span {
-      font-size: 0.95em;
+    .header-tel {
+      font-size: 1em;
       color: #4a8c6a;
       font-weight: bold;
     }
@@ -43,58 +43,31 @@
     /* ヒーロー */
     .hero {
       background: linear-gradient(135deg, #f5f0e8 0%, #eef5f0 100%);
-      padding: 60px 24px 50px;
+      padding: 56px 24px 48px;
       text-align: center;
     }
     .hero h1 {
-      font-size: 1.2em;
+      font-size: 1.5em;
       font-weight: bold;
       color: #2c2c2c;
-      line-height: 1.6;
+      line-height: 1.65;
       margin-bottom: 20px;
       letter-spacing: 0.03em;
     }
-    .hero h1 span {
-      display: block;
-      font-size: 0.85em;
-      color: #6a8c7a;
-      margin-top: 10px;
-      font-weight: normal;
-    }
     .hero-sub {
-      font-size: 0.95em;
+      font-size: 1em;
       color: #666;
       margin-bottom: 28px;
+      line-height: 1.9;
     }
     .hero-img {
       width: 100%;
       max-width: 480px;
       border-radius: 12px;
       object-fit: cover;
-      margin: 0 auto 28px;
+      margin: 0 auto;
       display: block;
       box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    }
-    .btn-cta {
-      display: inline-block;
-      background: #4a8c6a;
-      color: #fff;
-      text-decoration: none;
-      padding: 16px 36px;
-      border-radius: 50px;
-      font-size: 1.05em;
-      font-weight: bold;
-      letter-spacing: 0.05em;
-      box-shadow: 0 4px 14px rgba(74,140,106,0.35);
-      transition: background 0.2s;
-    }
-    .btn-cta:hover { background: #3a7558; }
-    .btn-cta small {
-      display: block;
-      font-size: 0.72em;
-      font-weight: normal;
-      margin-top: 4px;
-      opacity: 0.9;
     }
 
     /* セクション共通 */
@@ -105,12 +78,13 @@
       background: #fff;
     }
     .section-title {
-      font-size: 1.25em;
+      font-size: 1.3em;
       font-weight: bold;
       color: #4a8c6a;
       text-align: center;
       margin-bottom: 28px;
       letter-spacing: 0.05em;
+      line-height: 1.6;
     }
     .section-title::after {
       content: '';
@@ -122,7 +96,15 @@
       border-radius: 2px;
     }
 
-    /* 特徴 */
+    /* なごみハウジングについて */
+    .about-text {
+      font-size: 1em;
+      color: #444;
+      line-height: 2;
+      text-align: left;
+    }
+
+    /* 考え方 */
     .features {
       display: flex;
       flex-direction: column;
@@ -137,11 +119,42 @@
     .feature-card h3 {
       font-size: 1.05em;
       color: #2c2c2c;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      font-weight: bold;
     }
     .feature-card p {
-      font-size: 0.9em;
+      font-size: 0.95em;
       color: #666;
+      line-height: 1.9;
+    }
+
+    /* 対応工事 */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #e0d8ce;
+      border: 1px solid #e0d8ce;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .service-item {
+      background: #fff;
+      padding: 16px 14px;
+      font-size: 1em;
+      color: #333;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4a8c6a;
+      flex-shrink: 0;
     }
 
     /* 施工例 */
@@ -159,11 +172,17 @@
     }
     .gallery img:first-child {
       grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+    }
+    .gallery-caption {
+      margin-top: 14px;
+      font-size: 0.88em;
+      color: #999;
+      line-height: 1.8;
     }
 
     /* 流れ */
     .flow {
-      counter-reset: flow-counter;
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -177,7 +196,6 @@
       padding: 16px 18px;
     }
     .flow-num {
-      counter-increment: flow-counter;
       min-width: 36px;
       height: 36px;
       background: #4a8c6a;
@@ -187,10 +205,19 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 0.95em;
+      font-size: 1em;
+      flex-shrink: 0;
     }
-    .flow-item h3 { font-size: 1em; margin-bottom: 4px; }
-    .flow-item p { font-size: 0.88em; color: #666; }
+    .flow-item h3 {
+      font-size: 1em;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    .flow-item p {
+      font-size: 0.92em;
+      color: #666;
+      line-height: 1.9;
+    }
 
     /* 会社情報 */
     .company-box {
@@ -202,13 +229,17 @@
     .company-box table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.92em;
+      font-size: 0.97em;
     }
     .company-box th, .company-box td {
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #f0ece6;
       vertical-align: top;
       text-align: left;
+    }
+    .company-box tr:last-child th,
+    .company-box tr:last-child td {
+      border-bottom: none;
     }
     .company-box th {
       color: #4a8c6a;
@@ -217,44 +248,40 @@
       white-space: nowrap;
     }
 
-    /* 電話CTA */
+    /* LINE CTA */
     .cta-section {
       text-align: center;
       background: linear-gradient(135deg, #eef5f0, #f5f0e8);
     }
-    .cta-section p {
-      font-size: 0.95em;
+    .cta-body {
+      font-size: 1em;
       color: #555;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
+      line-height: 2;
+      text-align: left;
     }
-    .btn-tel {
+    .btn-line {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      background: #4a8c6a;
+      background: #06c755;
       color: #fff;
       text-decoration: none;
-      padding: 18px 40px;
+      padding: 20px 36px;
       border-radius: 50px;
-      font-size: 1.3em;
+      font-size: 1.15em;
       font-weight: bold;
       letter-spacing: 0.05em;
-      box-shadow: 0 4px 14px rgba(74,140,106,0.35);
+      box-shadow: 0 4px 14px rgba(6,199,85,0.3);
+      width: 100%;
+      max-width: 320px;
     }
-    .btn-tel::before {
-      content: '📞';
-      font-size: 1em;
-    }
-    .free-badge {
-      display: inline-block;
-      background: #e8f4ee;
-      color: #4a8c6a;
-      font-size: 0.8em;
-      font-weight: bold;
-      padding: 4px 12px;
-      border-radius: 20px;
+    .cta-note {
       margin-top: 12px;
-      border: 1px solid #b8d8c8;
+      font-size: 0.85em;
+      color: #999;
+      line-height: 1.8;
     }
 
     /* フッター */
@@ -263,14 +290,13 @@
       color: #aaa;
       text-align: center;
       padding: 28px 20px;
-      font-size: 0.82em;
+      font-size: 0.85em;
     }
     footer a {
       color: #bbb;
       text-decoration: none;
       margin: 0 8px;
     }
-    footer a:hover { color: #fff; }
     .footer-links {
       margin-bottom: 14px;
     }
@@ -284,44 +310,66 @@
   <!-- ヘッダー -->
   <header>
     <div class="logo">なごみハウジング</div>
-    <div class="header-tel"><span>090-3204-0515</span></div>
   </header>
 
   <!-- ヒーロー -->
   <div class="hero">
     <h1>
-      大きな会社ほど高くしたくない。<br>
-      でも、どこに頼めばいいか分からない。<br>
-      <span>そんな方のための、住まい相談窓口です。</span>
+      住まいの補修・リフォーム、<br>ご相談ください。
     </h1>
-    <p class="hero-sub">福岡市博多区エリア対応｜現地調査・お見積り無料</p>
+    <p class="hero-sub">
+      住まいの補修・リフォームのご相談を承っています。<br>
+      現地確認・お見積もりまで、お気軽にご相談ください。
+    </p>
     <img
-      src="C812A356-B68A-40D5-A3A7-E8C39D283842.png"
+      src="19AC885C-58B8-4B8B-8647-48085C4A9089.png"
       alt="なごみハウジング 施工例"
       class="hero-img"
     >
-    <div class="btn-cta">
-      無料でご相談する
-      <small>090-3204-0515（平塚）</small>
-    </div>
   </div>
 
-  <!-- 特徴 -->
+  <!-- なごみハウジングについて -->
   <section>
-    <h2 class="section-title">なごみハウジングの3つの特徴</h2>
+    <h2 class="section-title">なごみハウジングについて</h2>
+    <p class="about-text">
+      なごみハウジングは、住まいの補修・リフォームのご相談を受け付けています。<br><br>
+      気になることがあれば、まずはご連絡ください。
+    </p>
+  </section>
+
+  <!-- 考え方 -->
+  <section>
+    <h2 class="section-title">考え方</h2>
     <div class="features">
       <div class="feature-card">
-        <h3>中間コストなし、代表が直接対応</h3>
-        <p>代表・平塚かずひろが現地調査から施工まで一貫対応。余分なマージンをカットし、適正価格でご提供します。</p>
+        <h3>必要ない工事は、必要ないとお伝えします</h3>
+        <p>自分の家族ならどうするか。その基準で対応しています。</p>
       </div>
       <div class="feature-card">
-        <h3>現地調査・お見積り完全無料</h3>
-        <p>まず現場を見て、正確な費用をお伝えします。見積り後のキャンセルも可能。お気軽にご相談ください。</p>
+        <h3>見積内容を丁寧に説明します</h3>
+        <p>何の工事で、なぜその金額なのか。分かりやすくお伝えします。</p>
       </div>
       <div class="feature-card">
-        <h3>福岡市・近郊に素早く対応</h3>
-        <p>福岡市博多区を拠点に、福岡県全域および近郊エリアへスピーディーに対応。急ぎの修理もご相談ください。</p>
+        <h3>工事中の様子を、写真でご報告します</h3>
+        <p>屋根など、工事中の様子はお客様には見えません。工程ごとに写真を撮り、状況をご説明いたします。</p>
       </div>
+    </div>
+  </section>
+
+  <!-- 対応工事 -->
+  <section>
+    <h2 class="section-title">対応工事</h2>
+    <div class="services-grid">
+      <div class="service-item"><span class="service-dot"></span>雨漏り相談</div>
+      <div class="service-item"><span class="service-dot"></span>屋根工事</div>
+      <div class="service-item"><span class="service-dot"></span>瓦工事</div>
+      <div class="service-item"><span class="service-dot"></span>雨どい工事</div>
+      <div class="service-item"><span class="service-dot"></span>外構工事</div>
+      <div class="service-item"><span class="service-dot"></span>大工工事</div>
+      <div class="service-item"><span class="service-dot"></span>塗装工事</div>
+      <div class="service-item"><span class="service-dot"></span>防水工事</div>
+      <div class="service-item"><span class="service-dot"></span>小規模補修</div>
+      <div class="service-item"><span class="service-dot"></span>その他工事</div>
     </div>
   </section>
 
@@ -334,6 +382,7 @@
       <img src="C812A356-B68A-40D5-A3A7-E8C39D283842.png" alt="施工例3">
       <img src="6D66C21B-A901-43B4-A352-10BC3B16F4EA.png" alt="施工例4">
     </div>
+    <p class="gallery-caption">現場の状況を確認しながら、必要な工事を判断しています。</p>
   </section>
 
   <!-- ご依頼の流れ -->
@@ -343,29 +392,29 @@
       <div class="flow-item">
         <div class="flow-num">1</div>
         <div>
-          <h3>お電話・LINEでご相談</h3>
-          <p>症状・場所・お急ぎ度をざっくり教えてください。まずはお気軽に。</p>
+          <h3>LINEでご相談</h3>
+          <p>気になる箇所の写真や状況をお送りください。</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="flow-num">2</div>
         <div>
-          <h3>現地調査（無料）</h3>
-          <p>代表が直接訪問し、現状を確認します。費用は一切かかりません。</p>
+          <h3>現地確認（無料）</h3>
+          <p>私どもが現地の状況を確認します。費用は一切かかりません。</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="flow-num">3</div>
         <div>
-          <h3>お見積りご提示（無料）</h3>
-          <p>工事内容と費用を明確にご説明。ご納得いただいてから契約します。</p>
+          <h3>お見積もりご提示（無料）</h3>
+          <p>工事内容と費用をご説明します。ご納得いただいてから契約します。</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="flow-num">4</div>
         <div>
           <h3>着工・施工</h3>
-          <p>日程を調整の上、丁寧に施工いたします。</p>
+          <p>日程を調整のうえ、丁寧に施工いたします。</p>
         </div>
       </div>
       <div class="flow-item">
@@ -384,22 +433,26 @@
     <div class="company-box">
       <table>
         <tr><th>屋号</th><td>なごみハウジング</td></tr>
-        <tr><th>代表</th><td>平塚 万洋（かずひろ）</td></tr>
+        <tr><th>代表</th><td>平塚かずひろ</td></tr>
         <tr><th>所在地</th><td>福岡市博多区麦野5-5-6</td></tr>
         <tr><th>電話</th><td>090-3204-0515</td></tr>
         <tr><th>対応エリア</th><td>福岡県及び近郊</td></tr>
-        <tr><th>サービス</th><td>住まいの修理・リフォーム工事全般</td></tr>
+        <tr><th>サービス</th><td>住まいの補修・リフォーム工事全般</td></tr>
       </table>
     </div>
   </section>
 
-  <!-- 電話CTA -->
+  <!-- LINE CTA -->
   <section class="cta-section">
-    <h2 class="section-title">まずはお気軽にご相談ください</h2>
-    <p>現地調査・お見積りは完全無料。<br>しつこい営業は一切しません。</p>
-    <span class="btn-tel">090-3204-0515</span>
-    <br>
-    <span class="free-badge">現地調査・お見積り 無料</span>
+    <h2 class="section-title">まずはご相談ください</h2>
+    <p class="cta-body">
+      住まいの補修やリフォームで気になることがあれば、LINEからご連絡ください。<br><br>
+      お見積もりが必要な場合は、現地確認も含めて無料で対応いたします。<br><br>
+      お見積もり後に、工事を決めていただく必要はありません。<br>
+      内容をご確認いただいたうえで、ご判断いただけます。
+    </p>
+    <a href="#" class="btn-line">LINEで相談する（無料）</a>
+    <p class="cta-note">写真を送るだけでも大丈夫です</p>
   </section>
 
   <!-- フッター -->
